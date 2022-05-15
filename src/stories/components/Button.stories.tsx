@@ -12,9 +12,26 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const Primary = Template.bind({});
+export const Contained = Template.bind({});
 
-Primary.args = {
-  label: 'Button',
+Contained.args = {
+  label: 'Contained',
+  size: 'medium',
+  variant: 'contained',
 };
 
+export const Outlined = Template.bind({});
+
+Outlined.args = {
+  label: 'Outlined',
+  size: 'large',
+  variant: 'outlined'
+};
+
+export const Text = Template.bind({});
+
+Text.args = {
+  label: 'Outlined',
+  size: 'large',
+  variant: 'text'
+};
