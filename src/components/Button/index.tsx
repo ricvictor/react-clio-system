@@ -14,7 +14,7 @@ export function Button({
   
   function Content() {
     return loading ? (
-      <CircularProgress />
+      <CircularProgress size={15}/>
     ) : (
       <Typography weight="bold">{label}</Typography>
     );

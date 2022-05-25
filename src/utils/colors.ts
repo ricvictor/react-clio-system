@@ -40,4 +40,5 @@ export default {
   black: "#666E75",
   secondary: "#999EA3",
   ice: "#F9F9F9",
+  transparent: "#ffffff00"
 };
