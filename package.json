@@ -21,7 +21,8 @@
   },
   "dependencies": {
     "styled-components": "^5.3.5",
-    "react-icons": "^4.3.1"
+    "react-icons": "^4.3.1",
+    "styled-theming": "^2.2.0"
   },
   "scripts": {
     "storybook": "start-storybook -p 6006",
