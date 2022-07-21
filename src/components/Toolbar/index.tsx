@@ -1,17 +1,37 @@
 import React from "react";
-import { LogoContainer, Toolbar, Version } from "./styles";
-interface MainToolbarProps {
-  logo: string;
-  appVersion: string;
-}
-export function MainToolbar(props: MainToolbarProps) {
+import { ThemeProvider } from "styled-components";
+import { Typography } from "../Typography";
+import {
+    ContainerVersion, InfoContainer,
+    ItensContainer, ToolbarContainer,
+    VerticalLine
+} from "./style";
+import { ToolbarProps } from "./types";
+
+export function Header({
+  logo,
+  headerItens,
+  branchName,
+  version = "1.0",
+  theme = "dark",
+}: ToolbarProps) {
   return (
-    <Toolbar>
-      <LogoContainer>
-        <img src={props.logo} alt="logo" />
-        <Version>v{props.appVersion}</Version>
-      </LogoContainer>
-      <div>others</div>
-    </Toolbar>
+    <ThemeProvider theme={{ mode: theme }}>
+      <ToolbarContainer>
+        <InfoContainer>
+          {logo}
+          <ContainerVersion>
+            <Typography size="xxs" weight="regular">
+              V.{version}
+            </Typography>
+          </ContainerVersion>
+          <VerticalLine />
+          <Typography size="small" weight="regular">
+            {branchName}
+          </Typography>
+        </InfoContainer>
+        <ItensContainer>{headerItens}</ItensContainer>
+      </ToolbarContainer>
+    </ThemeProvider>
   );
 }
