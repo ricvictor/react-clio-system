@@ -1,6 +1,6 @@
 import { ComponentMeta, ComponentStory } from '@storybook/react';
 import React from 'react';
-import { IconButtonDarkThemeExample, IconButtonLightThemeExample, LogoDarkThemeExample, LogoLightThemeExample } from '../../assets/icons/icons';
+import { IconButtonDarkThemeExample, IconButtonLightThemeExample, LogoDarkThemeExample, LogoLightThemeExample } from '../../assets/demo/icons/icons';
 import { Header } from '../../components/Toolbar';
 
 export default {
