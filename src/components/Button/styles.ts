@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import colors from '../../utils/colors';
+import colors from '../../patters/colors';
 import { ButtonProps } from "./types";
 
 export const ElementButton = styled.button<ButtonProps>`

@@ -1,6 +1,6 @@
 import React from "react";
 import { CircularProgress } from "../CircularProgress";
-import Typography from "../Typography";
+import { Typography } from "../Typography";
 import { ContainedButton, Outlined, TextButton } from "./styles";
 import { ButtonProps } from "./types";
 
@@ -11,10 +11,9 @@ export function Button({
   loading,
   ...rest
 }: ButtonProps) {
-  
   function Content() {
     return loading ? (
-      <CircularProgress size={15}/>
+      <CircularProgress size={15} />
     ) : (
       <Typography weight="bold">{label}</Typography>
     );

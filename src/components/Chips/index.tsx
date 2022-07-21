@@ -4,12 +4,12 @@ import { Typography } from "../Typography";
 import { ChipButtonElement, ChipsBase } from "./styles";
 import { ChipsProps } from "./types";
 
-export const Chips = ({
+export function Chips({
   label,
   onClose,
   alert,
   variant = "contained",
-}: ChipsProps) => {
+}: ChipsProps) {
   function CloseButon() {
     return (
       <ChipButtonElement onClick={onClose}>
@@ -17,13 +17,13 @@ export const Chips = ({
       </ChipButtonElement>
     );
   }
-  /* 
-  * There is no experiencie without background color in case of success, warning or error
-  * so, doens't make sense to load a component with alert and text or outline attributes in 
-  * the same instance.
-  */
-  if (alert) variant = "contained"
-  
+  /*
+   * There is no experiencie without background color in case of success, warning or error
+   * so, doens't make sense to load a component with alert and text or outline attributes in
+   * the same instance.
+   */
+  if (alert) variant = "contained";
+
   const chipsProps = {
     border: variant === "contained" || variant === "outlined",
     background: variant === "contained",
@@ -37,4 +37,4 @@ export const Chips = ({
       {onClose ? <CloseButon /> : null}
     </ChipsBase>
   );
-};
+}
