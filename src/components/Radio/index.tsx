@@ -7,14 +7,17 @@ import { InputRadioProps } from './types';
 export function Radio({ 
   label, 
   name, 
-  value, 
+  value,
+  readOnly,
+  onChange,
   ...props
 }: InputRadioProps) {
-  const { readOnly, onChange } = props;
+
+  function onHandleChange (event) { if (!readOnly ) onChange(event) }
 
   return (
     <Label
-      onClick={readOnly ? () => {} : onChange}
+      onClick={onHandleChange}
       htmlFor={name}
     >
       <ElementRadio {...props} name={name} value={value} />

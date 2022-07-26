@@ -2,5 +2,4 @@ export interface InputRadioProps extends React.InputHTMLAttributes<HTMLInputElem
     label: string;
     name: string;
     value: any;
-    onChange?: () => void;
   }
